@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  height: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Raleway", sans-serif;
+}
+
+/* APP MAIN START */
+#app {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+/* APP MAIN END */
+
+/* NAVBAR START */
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.nav-links {
+  text-align: center;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-right: 15px;
+  text-decoration: none;
+}
+
+.item {
+  order: -1;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+  border-top: 2px solid #0065fc;
+  color: #0065fc;
+}
+
+#sign-up a {
+  color: #0065fc;
+  margin: 0;
+}
+
+/* NAVBAR END */
+
+header {
+  margin-top: 25px;
+}
+
+#main-search-form {
+  box-sizing: border-box;
+}
+
+.search-input-container {
+  display: flex;
+  overflow: hidden;
+  width: 400px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.search-input-container input[type="search"] {
+  height: 40px;
+  border: 1px solid #f2f2f2;
+  font-size: 10pt;
+  margin: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.search-input-container input[type="search"]::-webkit-input-placeholder {
+  color: #000000;
+  font-weight: 500;
+}
+
+.search-input-container input[type="search"]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #000000;
+  font-weight: 500;
+}
+
+.search-input-container input[type="search"]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #000000;
+  font-weight: 500;
+}
+
+.search-input-container input[type="search"]:-ms-input-placeholder {
+  color: #000000;
+  font-weight: 500;
+}
+
+.search-input-container button {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
+  background: #0065fc;
+  height: 40px;
+  margin: 0;
+  color: #f1f1f1;
+  font-size: 10pt;
+}
+
+.search-input-container p {
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+  background: #f2f2f2;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.search-input-container i {
+  position: relative;
+  top: 10px;
+}
+
+/* HEADER START*/
+.filters-container {
+  display: flex;
+  direction: row;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-title {
+  margin: 0;
+  margin-right: 30px;
+  margin-top: 10px;
+}
+
+.filter-tag {
+  margin-right: 20px;
+  margin-top: 10px;
+  border-radius: 30px;
+  border: 2px solid #f2f2f2;
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  direction: row;
+  justify-content: start;
+}
+
+.filter-tag p {
+  padding: 8px;
+  margin: 0;
+}
+
+.tag-icon {
+  background-color: #deebff;
+  width: 20px;
+  text-align: center;
+  text-justify: auto;
+  border-radius: 50%;
+}
+
+.search-info {
+  width: 350px;
+  display: flex;
+  direction: row;
+  align-items: center;
+  font-size: 0.8em;
+  margin-top: 10px;
+  color: gray;
+}
+
+.info-search-icon p {
+  margin: 0;
+  padding: 0;
+}
+
+.info-search-icon {
+  border: 2px solid gray;
+  border-radius: 50%;
+  color: #0065fc;
+  margin: 0;
+  margin-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 1em;
+}
+
+/* HEADER END */
+
+/* Accommodations START*/
+
+#accommodations {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#found-accommodations,
+#most-popular {
+  background: #f2f2f2;
+  padding: 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  order: 0;
+}
+
+#found-accommodations {
+  flex: 3;
+  margin-right: 10px;
+  order: 1;
+}
+
+#most-popular {
+  flex: 1;
+  margin-left: 10px;
+  order: 1;
+}
+
+.popular-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.accommodation-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.popular-cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 270px;
+  height: 200px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.card img {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 50%;
+  width: auto;
+}
+
+.card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title,
+.price {
+  font-weight: 700;
+  color: #000000;
+}
+
+.card-description {
+  color: gray;
+}
+
+.card p {
+  margin: 5px;
+  padding: 0;
+}
+
+.rating li {
+  list-style-type: none;
+  display: inline;
+  color: gray;
+}
+
+.rating ul {
+  margin: 0;
+  padding: 0;
+}
+
+.rating .filled {
+  color: #0065fc;
+}
+
+/* Activities section */
+#activities {
+  margin-top: 35px;
+}
+
+/* Footer START */
+footer {
+  background: #f3f3f3;
+  padding: 30px;
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+footer h4 {
+  margin-bottom: 15px;
+}
+
+footer section {
+  margin-right: 10%;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+/* media */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (max-width: 768px) {
+  #found-accommodations {
+    flex-basis: 100%;
+    margin: 0;
+    margin-top: 20px;
+    order: -1;
+  }
+  #most-popular {
+    margin: 0;
+    order: -2;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

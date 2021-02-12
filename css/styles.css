@@ -21,7 +21,7 @@ body {
   margin-left: auto;
   padding-right: 30px;
   padding-left: 30px;
-  min-width: 300px;
+  min-width: 350px;
 }
 
 /* APP MAIN END */
@@ -246,12 +246,12 @@ header h3 {
   flex-wrap: wrap;
 }
 
-#most-popular h3 {
+#accommodations h3 {
   margin-bottom: 20px;
 }
 
 #found-accommodations {
-  flex: 3 1;
+  flex: 3 15;
   margin-right: 10px;
   order: 1;
   display: flex;
@@ -329,7 +329,7 @@ header h3 {
 /* Most Popular Section start*/
 
 #most-popular {
-  flex: 1 1;
+  flex: 1 4;
   margin-left: 10px;
   order: 1;
 }
@@ -357,7 +357,7 @@ header h3 {
 
 .popular-card img {
   max-width: 50%;
-  height: auto;
+  max-height: 300px;
   align-self: center;
   -webkit-border-top-left-radius: 10px;
   -webkit-border-bottom-left-radius: 10px;
@@ -471,6 +471,7 @@ footer {
 
 footer h4 {
   margin-bottom: 15px;
+  margin-top: 20px;
 }
 
 footer section {
@@ -528,14 +529,23 @@ footer li {
     border-bottom: 2px solid #0065fc;
     color: #0065fc;
   }
-}
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-}
+  #found-accommodations {
+    width: 100%;
+  }
+  .accommodation-cards {
+    display: flex;
+    flex-flow: column wrap;
+  }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+  #found-accommodations .accommodation-cards .card {
+    width: 100%;
+  }
+
+  #found-accommodations .accommodation-cards .card img {
+    width: 100%;
+    height: 70%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -552,9 +562,90 @@ footer li {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 900px) {
+  #found-accommodations .card {
+    width: 260px;
+    height: 320px;
+  }
+  #found-accommodations {
+    flex: 1;
+    width: 100%;
+    order: 3;
+  }
+
+  #activities .gallery {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 1fr);
+  }
+
+  #activities .main-activity1 {
+    height: auto;
+    width: auto;
+    height: 300px;
+    grid-row: span 1;
+    grid-column-start: 1;
+  }
+  #activities .main-activity2 {
+    grid-row: span 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+  #activities .activity1 {
+    width: 100%;
+    grid-column-start: 1;
+  }
+  #activities .activity2 {
+    grid-column-start: 1;
+  }
+  #activities .activity3 {
+    grid-column-start: 1;
+  }
+  #activities .activity4 {
+    grid-column-start: 1;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1400px) {
+  #found-accommodations {
+    flex: 3 10;
+  }
+
+  #most-popular {
+    flex: 1;
+  }
+
+  .card {
+    width: 250px;
+    height: 220px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1570px) {
+  .card {
+    width: 270px;
+    height: 220px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  .card {
+    width: 400px;
+    height: 320px;
+  }
+
+  #most-popular {
+    order: -1;
+    flex: 100%;
+    margin: 0;
+  }
+
+  #found-accommodations {
+    margin: 0;
+    margin-top: 25px;
+  }
 }

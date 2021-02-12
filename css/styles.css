@@ -9,11 +9,12 @@ body {
   padding: 0;
   border: 0;
   font-size: 100%;
+  max-width: 1800px;
+  min-width: 350px;
   height: 100vh;
   font: inherit;
   width: 100%;
-  max-width: 1800px;
-  min-width: 300px;
+  
   vertical-align: baseline;
   font-family: "Raleway", sans-serif;
   margin: auto;
@@ -98,33 +99,14 @@ header h3 {
 .search-input-container input[type="search"] {
   height: 40px;
   border: 1px solid #f2f2f2;
-  font-size: 10pt;
+  font-size: 1em;
   margin: 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-}
-
-.search-input-container input[type="search"]::-webkit-input-placeholder {
+  padding-left: 15px;
   color: #000000;
-  font-weight: 500;
-}
-
-.search-input-container input[type="search"]:-moz-placeholder {
-  /* Firefox 18- */
-  color: #000000;
-  font-weight: 500;
-}
-
-.search-input-container input[type="search"]::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #000000;
-  font-weight: 500;
-}
-
-.search-input-container input[type="search"]:-ms-input-placeholder {
-  color: #000000;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .search-input-container button {
@@ -139,7 +121,10 @@ header h3 {
   height: 40px;
   margin: 0;
   color: #f1f1f1;
-  font-size: 10pt;
+  font-size: 1em;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .search-input-container p {
@@ -156,11 +141,14 @@ header h3 {
   text-align: center;
   margin: 0;
   font-size: 1.2em;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.search-input-container i {
+.search-input-container p i {
   position: relative;
-  top: 10px;
+  top: 8px;
+
 }
 
 /* HEADER START*/
@@ -173,6 +161,7 @@ header h3 {
 }
 
 .filter-title {
+  font-weight: 600;
   margin: 0;
   margin-right: 30px;
   margin-top: 10px;
@@ -197,7 +186,7 @@ header h3 {
 
 .tag-icon {
   background-color: #deebff;
-  width: 20px;
+  width: 40px;
   text-align: center;
   text-justify: auto;
   border-radius: 50%;
@@ -256,7 +245,7 @@ header h3 {
 }
 
 .acc-recommendation {
-  flex: 1;
+  flex: 1.5;
 }
 
 .wrapper-searched-acc {
@@ -265,7 +254,7 @@ header h3 {
   gap: 20px;
 }
 
-.accommodation-card {
+.vertical-card {
   overflow: hidden;
   background-color: white;
   border-radius: 1rem;
@@ -304,11 +293,11 @@ header h3 {
   color: gray;
 }
 
-.accommodation-card .filled {
+.rate .filled {
   color: #0065fc;
 }
 
-.accommodation-card img {
+.vertical-card img {
   height: 60%;
   -webkit-border-top-left-radius: 10px;
   -webkit-border-top-right-radius: 10px;
@@ -326,7 +315,33 @@ header h3 {
   justify-content: space-between;
 }
 
+.wrapper-popular-acc {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
 
+.horizontal-card {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    padding: 5px;
+}
+
+.horizontal-card img {
+  width: 50%;
+  -webkit-border-bottom-left-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  display: block;
+  object-fit: cover;
+}
 
 /* Activities section */
 #activities {
@@ -381,6 +396,7 @@ header h3 {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 10px;
+  font-weight: 600;
 }
 
 .main-activity1 {
@@ -443,10 +459,10 @@ footer li {
   font-size: 0.8em;
 }
 
-/* media */
+/* MEDIA QUERY START */
+
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 650px) {
-  /* modifying the nivebar when the screen gets down to 650px in viewport */
+@media only screen and (max-width: 600px) {
   .links {
     width: 120%;
     order: 2;
@@ -484,48 +500,7 @@ footer li {
     color: #0065fc;
   }
 
-  #found-accommodations {
-    width: 100%;
-  }
-  .accommodation-cards {
-    display: flex;
-    flex-flow: column wrap;
-  }
-
-  #found-accommodations .accommodation-cards .card {
-    width: 100%;
-  }
-
-  #found-accommodations .accommodation-cards .card img {
-    width: 100%;
-    height: 70%;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  #found-accommodations {
-    flex-basis: 100%;
-    margin: 0;
-    margin-top: 20px;
-    order: -1;
-  }
-  #most-popular {
-    margin: 0;
-    order: -2;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 900px) {
-  #found-accommodations .card {
-    width: 260px;
-    height: 320px;
-  }
-  #found-accommodations {
-    flex: 1;
-    width: 100%;
-    order: 3;
-  }
+  
 
   #activities .gallery {
     margin-top: 25px;
@@ -537,41 +512,68 @@ footer li {
   #activities .main-activity1 {
     height: auto;
     width: auto;
-    height: 300px;
+    height: 200px;
     grid-row: span 1;
     grid-column-start: 1;
   }
+
   #activities .main-activity2 {
     grid-row: span 1;
     grid-column-start: 1;
     grid-column-end: 1;
   }
+
   #activities .activity1 {
     width: 100%;
     grid-column-start: 1;
   }
+
   #activities .activity2 {
     grid-column-start: 1;
   }
+
   #activities .activity3 {
     grid-column-start: 1;
   }
+
   #activities .activity4 {
     grid-column-start: 1;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .wrapper-searched-acc {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  #accommodations {
+    flex-direction: column;
+  }
+  
+  .acc-results {
+    flex: 1;
+  }
+  
+  .acc-recommendation {
+    flex: 1;
+    order: -1;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1400px) {
-  
-}
+@media only screen and (min-width: 1200px) {}
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1570px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {
-
-}
+/* MEDIA QUERY END */

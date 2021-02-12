@@ -1,6 +1,7 @@
 * {
   transition: 0.33 ease all;
   margin: 0;
+  box-sizing: border-box;
 }
 html,
 body {
@@ -11,8 +12,11 @@ body {
   height: 100vh;
   font: inherit;
   width: 100%;
+  max-width: 1800px;
+  min-width: 300px;
   vertical-align: baseline;
   font-family: "Raleway", sans-serif;
+  margin: auto;
 }
 
 /* APP MAIN START */
@@ -228,152 +232,102 @@ header h3 {
 /* HEADER END */
 
 /* Accommodations START*/
-
-#found-accommodations,
-#most-popular {
-  background: #f2f2f2;
-  padding: 20px;
-  border-radius: 15px;
-  box-sizing: border-box;
-  order: 0;
-}
-
 #accommodations {
-  margin-top: 20px;
+  margin-top: 30px;
+  box-sizing: border-box;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
-  flex-wrap: wrap;
+  gap: 30px;
 }
 
-#accommodations h3 {
+#accommodations h3, #acc-recommendation h3{
   margin-bottom: 20px;
 }
 
-#found-accommodations {
-  flex: 3 15;
-  margin-right: 10px;
-  order: 1;
+.acc-results, .acc-recommendation {
+  padding: 25px;
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+
+.acc-results {
+  flex: 3;
+}
+
+.acc-recommendation {
+  flex: 1;
+}
+
+.wrapper-searched-acc {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.accommodation-card {
+  overflow: hidden;
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
-}
-
-.accommodation-cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: start;
-}
-
-.card {
-  width: 350px;
-  height: 220px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  background: white;
-  border-radius: 15px;
   padding: 5px;
-  margin: auto;
-  margin-bottom: 20px;
-}
-.card img {
-  -webkit-border-top-right-radius: 10px;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topright: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  height: 60%;
-  width: auto;
+  height: 250px;
 }
 
 .card-body {
-  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 10px;
+  height: 100%;
 }
 
-.card-title,
-.price {
-  font-weight: 700;
-  color: #000000;
+.card-title, .price {
+  font-weight: 600;
 }
 
-.card-description {
-  color: gray;
+.card-description, .rate {
+  font-size: 0.9em;
 }
 
-.card p {
-  margin: 5px;
+.rate ul {
+  margin: 0;
+  padding: 0;
   padding: 0;
 }
 
-.rating li {
+.rate li {
   list-style-type: none;
   display: inline;
   color: gray;
 }
 
-.rating ul {
-  margin: 0;
-  padding: 0;
-}
-
-.rating .filled {
+.accommodation-card .filled {
   color: #0065fc;
 }
 
-/* Most Popular Section start*/
-
-#most-popular {
-  flex: 1 4;
-  margin-left: 10px;
-  order: 1;
+.accommodation-card img {
+  height: 60%;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: block;
+  object-fit: cover;
 }
 
-.popular-header {
+.popular-section-title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.popular-cards {
-  display: flex;
-  flex-flow: column wrap;
-}
 
-.popular-card {
-  display: flex;
-  flex-flow: row;
-  padding: 5px;
-  border-radius: 15px;
-  height: auto;
-  background: white;
-  margin-bottom: 20px;
-}
 
-.popular-card img {
-  max-width: 50%;
-  max-height: 300px;
-  align-self: center;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  margin-right: 15px;
-}
-
-.popular-body {
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: column;
-  justify-content: space-between;
-}
 /* Activities section */
 #activities {
   margin-top: 35px;
@@ -609,43 +563,15 @@ footer li {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1400px) {
-  #found-accommodations {
-    flex: 3 10;
-  }
-
-  #most-popular {
-    flex: 1;
-  }
-
-  .card {
-    width: 250px;
-    height: 220px;
-  }
+  
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1570px) {
-  .card {
-    width: 270px;
-    height: 220px;
-  }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
-  .card {
-    width: 400px;
-    height: 320px;
-  }
 
-  #most-popular {
-    order: -1;
-    flex: 100%;
-    margin: 0;
-  }
-
-  #found-accommodations {
-    margin: 0;
-    margin-top: 25px;
-  }
 }

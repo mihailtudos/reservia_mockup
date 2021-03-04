@@ -161,6 +161,7 @@ header h3 {
   justify-content: start;
   flex-wrap: wrap;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .filter-title {
@@ -171,6 +172,7 @@ header h3 {
 }
 
 .filter-tag {
+  box-sizing: border-box;
   margin-right: 20px;
   margin-top: 10px;
   border-radius: 30px;
@@ -188,7 +190,7 @@ header h3 {
 
 .tag-icon {
   background-color: #deebff;
-  width: 40px;
+  width: 38px;
   text-align: center;
   text-justify: auto;
   border-radius: 50%;
@@ -217,6 +219,10 @@ header h3 {
   padding-left: 5px;
   padding-right: 5px;
   font-size: 1em;
+}
+
+.filter-tag:hover {
+  background-color: gray;
 }
 
 /* HEADER END */

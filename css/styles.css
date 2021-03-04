@@ -322,6 +322,7 @@ header h3 {
 .wrapper-popular-acc {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: 200px 200px 200px;
   gap: 20px;
 }
 
@@ -564,6 +565,9 @@ footer li {
   .wrapper-searched-acc {
     grid-template-columns: 1fr;
   }
+  .acc-results .wrapper-searched-acc {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -584,13 +588,6 @@ footer li {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1300px) {
-  .acc-results {
-    flex: 2.5;
-  }
-
-  .acc-recommendation {
-    flex: 1.5;
-  }
   .wrapper-searched-acc {
     display: grid;
     grid-template-columns: 1fr 1fr;
